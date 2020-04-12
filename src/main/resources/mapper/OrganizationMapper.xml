@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ysq.chuang_qian.mapper.OrganizationMapper" >
+  <resultMap id="BaseResultMap" type="com.ysq.chuang_qian.entity.Organization" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="organization_id" property="organizationId" jdbcType="VARCHAR" />
+    <result column="organization_name" property="organizationName" jdbcType="VARCHAR" />
+    <result column="organization_leader_id" property="organizationLeaderId" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

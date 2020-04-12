@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+    JJJ
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    $.ajax({
+        url:"http://localhost:6963/user/get",
+        type: 'get',
+        datatype: 'JSON',
+        success: function (result) {
+            alert(result.data.id);
+        }
+    })
+</script>
+</body>
+</html>

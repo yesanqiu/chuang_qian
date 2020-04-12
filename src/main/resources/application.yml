@@ -1,0 +1,34 @@
+server:
+  port: 6963
+
+spring:
+  servlet:
+    multipart:
+      max-request-size: 10GB
+      max-file-size: 1GB
+  profiles:
+    active: prod
+
+
+#  mvc:
+#    static-path-pattern: /**
+#  resources:
+#    static-locations: classpath:/static/
+
+
+range: 500
+
+pagehelper:
+  helper-dialect: mysql
+  #�������ҳ���󻹻᷵������:reasonable: true
+  reasonable: false
+  support-methods-arguments: true
+  params: count=countSql
+
+app:
+  appid: 2
+  appSecret: 3
+  appTimeOut: 10000
+  mchId: 4
+  createOrderUrl: https://api.mch.weixin.qq.com/pay/unifiedorder
+  notifyUrl: https:www.wolzq.com/weixin/API/Order/notify

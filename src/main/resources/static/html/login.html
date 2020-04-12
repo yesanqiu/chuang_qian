@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form action="http://localhost:6963/login" method="post">
+        <input id="uName" type="text"name="uName"/>
+        <input id="pwd" type="password" name="pwd"/>
+        <input id="code" type="text" name="code"/>
+        <img src="http://localhost:6963/getCode"/>
+        <button type="submit">login</button>
+        <button type="button" onclick=getCookie()>cookie</button>
+    </form>
+<script>
+    function getCookie() {
+        alert(1);
+        var cookieName = "ASP.NET_SessionId";
+        var cookieValue = null;//返回cookie的value值
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');//将获得的所有cookie切割成数组
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i];//得到某下标的cookies数组
+                if (cookie.substring(0, cookieName.length + 2).trim() == cookieName.trim() + "=") {//如果存在该cookie的话就将cookie的值拿出来
+                    cookieValue = cookie.substring(cookieName.length + 2, cookie.length);
+                    break
+                }
+            }
+        }
+        if (cookieValue != "" && cookieValue != null) {//如果存在指定的cookie值
+            alert(cookieValue);
+        } else {
+           //如果cookie的值是空</span>
+            alert("not cookie!!!");
+        }
+    }
+</script>
+</body>
+</html>

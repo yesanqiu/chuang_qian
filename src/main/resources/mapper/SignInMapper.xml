@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ysq.chuang_qian.mapper.SignInMapper" >
+  <resultMap id="BaseResultMap" type="com.ysq.chuang_qian.entity.SignIn" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="sign_in_id" property="signInId" jdbcType="VARCHAR" />
+    <result column="organization_id" property="organizationId" jdbcType="VARCHAR" />
+    <result column="longitude" property="longitude" jdbcType="DOUBLE" />
+    <result column="latitude" property="latitude" jdbcType="DOUBLE" />
+  </resultMap>
+</mapper>
